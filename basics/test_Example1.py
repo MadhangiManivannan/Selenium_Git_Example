@@ -35,6 +35,15 @@ def test_whatsapp():
     driver.close()
 
 
+def test_flipkart():
+    driver = webdriver.Firefox()
+    driver.get("https://www.flipkart.com")
+    driver.maximize_window()
+    driver.implicitly_wait(30)
+    assert driver.title == "instagram"
+    driver.close()
+
+
 
 def test_rediff():
     driver = webdriver.Chrome()
