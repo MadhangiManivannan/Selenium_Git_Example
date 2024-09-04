@@ -1,4 +1,3 @@
-import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -15,8 +14,7 @@ def test_setUp():
     driver.close()
 
 
-@allure.description("OrangeHRM valid credential")
-@allure.severity(severity_level="Critical")
+
 def test_validCredentials(test_setUp):
     driver.find_element(By.NAME, "username").send_keys("Admin")
     driver.find_element(By.NAME, "password").send_keys("admin123")
